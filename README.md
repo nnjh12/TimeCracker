@@ -1,5 +1,5 @@
 # TimeCracker
-App helping users easily record, label, and track their time
+App helping users easily record, label, track, and summarize their time
 
 ## Who will use our app?
 Our app is perfect for anyone who needs to keep track of their daily tasks and routines.
