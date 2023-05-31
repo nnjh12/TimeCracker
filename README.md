@@ -22,5 +22,7 @@ Charlie is a running enthusiast who loves to track his progress. With our app, h
 ## How will our app be used?
 Our app has three great features that make it easy to record, label, and track your time:<br />
 First, with just one simple click, you can record the time in the app's first view. You don't need to go through any more steps - it's that easy! You can always edit or label the time later if you need to.<br />
+
 Second, our app allows you to label your recorded time. When you label a time, the label automatically appears in the first view recording times. This means that if you often record the same type of activity, such as 'feed' or 'sleep', you can click the labeled button and avoid the need to label the time later.<br />
+
 Finally, in the time logs view, you can easily sort your recorded times based on your labels. This makes it simple to track and analyze your time records. Whether you're trying to keep track of your daily routine or measure your progress towards a specific goal, our app makes it easy to stay organized.
