@@ -15,7 +15,7 @@ Scenario3.<br />
 Charlie is a running enthusiast who loves to track his progress. With our app, he can easily record the duration of his runs. When he starts his run, he can clock in using the app, and when he finishes, he can clock out. This way, he can keep track of how long he runs each day.
 
 ## How will our app be used?
-Our app has three great features that make it easy to record, label, and track your time:<br />
+Our app has four great features that make it easy to record, label, and track your time:<br />
 - First, with just one simple click, users can record the time. Users don't need to go through any more steps - it's that easy!
 - Second, Users can add labels to their recorded time, which they can reuse later.<br />
 - Third, users can quickly filter their recorded times based on their labels, making it easy to keep track of their activities.
