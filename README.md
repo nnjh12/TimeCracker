@@ -1,11 +1,6 @@
 # TimeCracker
 App helping users easily record, label, and track their time
 
-## What’s our app?
-When users first open the app, they'll see a page where they can start recording their time with a simple button click. 
-They can also add labels to their recorded time, which they can reuse later.
-Plus, users can quickly sort their times based on their labels, making it easy to keep track of their activities.
-
 ## Who will use our app?
 Our app is perfect for anyone who needs to keep track of their daily tasks and routines.
 
@@ -21,8 +16,7 @@ Charlie is a running enthusiast who loves to track his progress. With our app, h
 
 ## How will our app be used?
 Our app has three great features that make it easy to record, label, and track your time:<br />
-First, with just one simple click, you can record the time in the app's first view. You don't need to go through any more steps - it's that easy! You can always edit or label the time later if you need to.<br />
-
-Second, our app allows you to label your recorded time. When you label a time, the label automatically appears in the first view recording times. This means that if you often record the same type of activity, such as 'feed' or 'sleep', you can click the labeled button and avoid the need to label the time later.<br />
-
-Finally, in the time logs view, you can easily sort your recorded times based on your labels. This makes it simple to track and analyze your time records. Whether you're trying to keep track of your daily routine or measure your progress towards a specific goal, our app makes it easy to stay organized.
+- First, with just one simple click, users can record the time. Users don't need to go through any more steps - it's that easy!
+- Second, Users can add labels to their recorded time, which they can reuse later.<br />
+- Third, users can quickly filter their recorded times based on their labels, making it easy to keep track of their activities.
+- Plus, users can see summary reports on their activities. 
