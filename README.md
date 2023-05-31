@@ -19,4 +19,4 @@ Our app has four great features that make it easy to record, label, and track us
 - First, with just one simple click, users can record the time. Users don't need to go through any more steps - it's that easy!
 - Second, Users can add labels to their recorded time, which they can reuse later.<br />
 - Third, users can quickly filter their recorded times based on their labels, making it easy to keep track of their activities.
-- Plus, users can see summary reports on their activities. 
+- Plus, users can view summary reports detailing their activities, including the amount of time spent on specific tasks and the duration of each task.
