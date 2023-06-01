@@ -11,6 +11,8 @@
 		33FE53722A27CF3D0070A917 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE53712A27CF3D0070A917 /* ContentView.swift */; };
 		33FE53742A27CF3E0070A917 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33FE53732A27CF3E0070A917 /* Assets.xcassets */; };
 		33FE53772A27CF3E0070A917 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33FE53762A27CF3E0070A917 /* Preview Assets.xcassets */; };
+		33FE538B2A28EACC0070A917 /* ClockInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE538A2A28EACC0070A917 /* ClockInButton.swift */; };
+		33FE538D2A28EBC90070A917 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE538C2A28EBC90070A917 /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		33FE53712A27CF3D0070A917 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		33FE53732A27CF3E0070A917 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33FE53762A27CF3E0070A917 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		33FE538A2A28EACC0070A917 /* ClockInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockInButton.swift; sourceTree = "<group>"; };
+		33FE538C2A28EBC90070A917 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,7 @@
 		33FE537E2A28E8910070A917 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				33FE538C2A28EBC90070A917 /* Task.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -137,6 +142,7 @@
 		33FE53852A28E9CA0070A917 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				33FE538A2A28EACC0070A917 /* ClockInButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -225,6 +231,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33FE538D2A28EBC90070A917 /* Task.swift in Sources */,
+				33FE538B2A28EACC0070A917 /* ClockInButton.swift in Sources */,
 				33FE53722A27CF3D0070A917 /* ContentView.swift in Sources */,
 				33FE53702A27CF3D0070A917 /* TimeCrackerApp.swift in Sources */,
 			);
