@@ -53,6 +53,9 @@
 			children = (
 				33FE536F2A27CF3D0070A917 /* TimeCrackerApp.swift */,
 				33FE53712A27CF3D0070A917 /* ContentView.swift */,
+				33FE537D2A28E8880070A917 /* View */,
+				33FE537E2A28E8910070A917 /* Model */,
+				33FE53842A28E9530070A917 /* Elements */,
 				33FE53732A27CF3E0070A917 /* Assets.xcassets */,
 				33FE53752A27CF3E0070A917 /* Preview Content */,
 			);
@@ -65,6 +68,91 @@
 				33FE53762A27CF3E0070A917 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		33FE537D2A28E8880070A917 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				33FE53802A28E8EA0070A917 /* Auth */,
+				33FE537F2A28E8DD0070A917 /* ClockIn */,
+				33FE53812A28E8F10070A917 /* Logs */,
+				33FE53822A28E9000070A917 /* Reports */,
+				33FE53832A28E9070070A917 /* Settings */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		33FE537E2A28E8910070A917 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		33FE537F2A28E8DD0070A917 /* ClockIn */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ClockIn;
+			sourceTree = "<group>";
+		};
+		33FE53802A28E8EA0070A917 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		33FE53812A28E8F10070A917 /* Logs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Logs;
+			sourceTree = "<group>";
+		};
+		33FE53822A28E9000070A917 /* Reports */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Reports;
+			sourceTree = "<group>";
+		};
+		33FE53832A28E9070070A917 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		33FE53842A28E9530070A917 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				33FE53852A28E9CA0070A917 /* Buttons */,
+				33FE53872A28E9FD0070A917 /* Rows */,
+				33FE53862A28E9D30070A917 /* TextFields */,
+			);
+			path = Elements;
+			sourceTree = "<group>";
+		};
+		33FE53852A28E9CA0070A917 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		33FE53862A28E9D30070A917 /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TextFields;
+			sourceTree = "<group>";
+		};
+		33FE53872A28E9FD0070A917 /* Rows */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Rows;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
