@@ -14,6 +14,10 @@
 		33FE538B2A28EACC0070A917 /* ClockInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE538A2A28EACC0070A917 /* ClockInButton.swift */; };
 		33FE538D2A28EBC90070A917 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE538C2A28EBC90070A917 /* Task.swift */; };
 		33FE53912A2A2D0A0070A917 /* ClockInOutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE53902A2A2D0A0070A917 /* ClockInOutButton.swift */; };
+		33FE53952A2A3BDC0070A917 /* DisplayButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE53942A2A3BDC0070A917 /* DisplayButtons.swift */; };
+		33FE53972A2A3C270070A917 /* EditButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE53962A2A3C270070A917 /* EditButton.swift */; };
+		33FE53992A2A3C300070A917 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE53982A2A3C300070A917 /* AddButton.swift */; };
+		33FE539B2A2A3C420070A917 /* ClockIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE539A2A2A3C420070A917 /* ClockIn.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +29,10 @@
 		33FE538A2A28EACC0070A917 /* ClockInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockInButton.swift; sourceTree = "<group>"; };
 		33FE538C2A28EBC90070A917 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		33FE53902A2A2D0A0070A917 /* ClockInOutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockInOutButton.swift; sourceTree = "<group>"; };
+		33FE53942A2A3BDC0070A917 /* DisplayButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayButtons.swift; sourceTree = "<group>"; };
+		33FE53962A2A3C270070A917 /* EditButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditButton.swift; sourceTree = "<group>"; };
+		33FE53982A2A3C300070A917 /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
+		33FE539A2A2A3C420070A917 /* ClockIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockIn.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +107,10 @@
 		33FE537F2A28E8DD0070A917 /* ClockIn */ = {
 			isa = PBXGroup;
 			children = (
+				33FE539A2A2A3C420070A917 /* ClockIn.swift */,
+				33FE53942A2A3BDC0070A917 /* DisplayButtons.swift */,
+				33FE53962A2A3C270070A917 /* EditButton.swift */,
+				33FE53982A2A3C300070A917 /* AddButton.swift */,
 			);
 			path = ClockIn;
 			sourceTree = "<group>";
@@ -235,10 +247,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				33FE538D2A28EBC90070A917 /* Task.swift in Sources */,
+				33FE539B2A2A3C420070A917 /* ClockIn.swift in Sources */,
 				33FE538B2A28EACC0070A917 /* ClockInButton.swift in Sources */,
 				33FE53912A2A2D0A0070A917 /* ClockInOutButton.swift in Sources */,
+				33FE53992A2A3C300070A917 /* AddButton.swift in Sources */,
 				33FE53722A27CF3D0070A917 /* ContentView.swift in Sources */,
+				33FE53972A2A3C270070A917 /* EditButton.swift in Sources */,
 				33FE53702A27CF3D0070A917 /* TimeCrackerApp.swift in Sources */,
+				33FE53952A2A3BDC0070A917 /* DisplayButtons.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

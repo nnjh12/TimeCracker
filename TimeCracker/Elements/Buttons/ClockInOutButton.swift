@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+/// A view that displays a button for task that needs both clock in and out.
+/// - Parameter label: task's label name
+/// - Parameter color: button color
+/// - Parameter clockIn: a function for clock in
+/// - Parameter clockOut: a function for clock out
 struct ClockInOutButton: View {
     @State private var isClockedIn: Bool = false
     var label: String

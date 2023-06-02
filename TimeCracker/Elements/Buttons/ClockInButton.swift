@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+/// A view that displays a button for task that only needs clock in.
+/// - Parameter label: task's label name
+/// - Parameter color: button color
+/// - Parameter clockIn: a function for clock in
 struct ClockInButton: View {
     var label: String
     var color: Color

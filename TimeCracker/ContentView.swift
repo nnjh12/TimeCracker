@@ -8,17 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var tasks = Tasks()
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, time cracker!")
-            ClockInButton(label: "task1", color: .pink, clockIn: {() -> Void in print("button is clicked")})
-            ClockInOutButton(label: "clockInOut", color: .green, clockIn: {() -> Void in print("clockIn")}, clockOut: {() -> Void in print("clockOut")})
-        }
-        .padding()
+        DisplayButtons()
+        .environmentObject(tasks)
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
