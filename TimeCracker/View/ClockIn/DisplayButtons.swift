@@ -14,7 +14,11 @@ struct DisplayButtons: View {
         NavigationView {
             ScrollView {
                 ForEach(tasks.tasks) {task in
-                    Text(task.label)
+                    if (task.ableToClockOut) {
+                        ClockInOutButton(task: task)
+                    } else {
+                        ClockInButton(task: task)
+                    }
                 }
             }
             .navigationTitle("Clock In")

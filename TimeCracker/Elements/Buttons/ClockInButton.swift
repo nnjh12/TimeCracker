@@ -8,10 +8,14 @@
 import SwiftUI
 
 /// A view that displays a button for task that only needs clock in.
-/// - Parameter label: task's label name
-/// - Parameter color: button color
-/// - Parameter clockIn: a function for clock in
 struct ClockInButton: View {
+    var task: Task = Task(label: "example", color: .pink, ableToClockOut: false)
+    var body: some View {
+        ClockInButtonUI(label: task.label, color: task.color, clockIn: task.clockIn)
+    }
+}
+
+struct ClockInButtonUI: View {
     var label: String
     var color: Color
     var clockIn: () -> Void // need to pass parameter?
@@ -30,8 +34,8 @@ struct ClockInButton: View {
     }
 }
 
-struct ClockInButton_Previews: PreviewProvider {
+struct ClockInButtonUI_Previews: PreviewProvider {
     static var previews: some View {
-        ClockInButton(label: "task1", color: .pink, clockIn: {() -> Void in print("button is clicked")})
+        ClockInButtonUI(label: "example", color: .pink, clockIn: {() -> Void in print("clockIn")})
     }
 }

@@ -8,11 +8,14 @@
 import SwiftUI
 
 /// A view that displays a button for task that needs both clock in and out.
-/// - Parameter label: task's label name
-/// - Parameter color: button color
-/// - Parameter clockIn: a function for clock in
-/// - Parameter clockOut: a function for clock out
 struct ClockInOutButton: View {
+    var task: Task = Task(label: "example", color: .pink, ableToClockOut: false)
+    var body: some View {
+        ClockInOutButtonUI(label: task.label, color: task.color, clockIn: task.clockIn, clockOut: task.clockOut)
+    }
+}
+
+struct ClockInOutButtonUI: View {
     @State private var isClockedIn: Bool = false
     var label: String
     var color: Color
@@ -38,8 +41,8 @@ struct ClockInOutButton: View {
     }
 }
 
-struct ClockInOutButton_Previews: PreviewProvider {
+struct ClockInOutButtonUI_Previews: PreviewProvider {
     static var previews: some View {
-        ClockInOutButton(label: "clockInOut", color: .green, clockIn: {() -> Void in print("clockIn")}, clockOut: {() -> Void in print("clockOut")})
+        ClockInOutButtonUI(label: "clockInOut", color: .green, clockIn: {() -> Void in print("clockIn")}, clockOut: {() -> Void in print("clockOut")})
     }
 }
