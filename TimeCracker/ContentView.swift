@@ -14,6 +14,8 @@ struct ContentView: View {
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
             Text("Hello, time cracker!")
+            ClockInButton(label: "task1", color: .pink, clockIn: {() -> Void in print("button is clicked")})
+            ClockInOutButton(label: "clockInOut", color: .green, clockIn: {() -> Void in print("clockIn")}, clockOut: {() -> Void in print("clockOut")})
         }
         .padding()
     }

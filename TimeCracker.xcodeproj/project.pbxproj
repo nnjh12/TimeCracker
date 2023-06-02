@@ -13,6 +13,7 @@
 		33FE53772A27CF3E0070A917 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33FE53762A27CF3E0070A917 /* Preview Assets.xcassets */; };
 		33FE538B2A28EACC0070A917 /* ClockInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE538A2A28EACC0070A917 /* ClockInButton.swift */; };
 		33FE538D2A28EBC90070A917 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE538C2A28EBC90070A917 /* Task.swift */; };
+		33FE53912A2A2D0A0070A917 /* ClockInOutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE53902A2A2D0A0070A917 /* ClockInOutButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		33FE53762A27CF3E0070A917 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		33FE538A2A28EACC0070A917 /* ClockInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockInButton.swift; sourceTree = "<group>"; };
 		33FE538C2A28EBC90070A917 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		33FE53902A2A2D0A0070A917 /* ClockInOutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockInOutButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				33FE538A2A28EACC0070A917 /* ClockInButton.swift */,
+				33FE53902A2A2D0A0070A917 /* ClockInOutButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 			files = (
 				33FE538D2A28EBC90070A917 /* Task.swift in Sources */,
 				33FE538B2A28EACC0070A917 /* ClockInButton.swift in Sources */,
+				33FE53912A2A2D0A0070A917 /* ClockInOutButton.swift in Sources */,
 				33FE53722A27CF3D0070A917 /* ContentView.swift in Sources */,
 				33FE53702A27CF3D0070A917 /* TimeCrackerApp.swift in Sources */,
 			);
