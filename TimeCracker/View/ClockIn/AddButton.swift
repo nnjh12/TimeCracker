@@ -11,6 +11,12 @@ import SwiftUI
 struct AddButtonPage: View {
     @Binding var currentMode: mode
     var body: some View {
-        Text("Add Button")
+        VStack {
+            CloseButton(onClick: {() -> Void in currentMode = .display})
+            TextLeftAligned(text: "Task's name")
+                .font(.subheadline)
+            TaskTextField(placeholder: "Enter your task's name")
+        }
+        .padding()
     }
 }
