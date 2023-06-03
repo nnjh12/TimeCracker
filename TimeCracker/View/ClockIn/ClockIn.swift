@@ -8,27 +8,20 @@
 import SwiftUI
 
 enum mode {
-    case display, edit, add
+    case display, add, edit
 }
 
-/// A main view for clock in.
+/// A ClockIn's main view that handles current mode(display, edit, add).
 struct ClockIn: View {
     @State private var currentMode: mode = .display
     var body: some View {
         switch currentMode {
         case .display:
-            DisplayButtons()
+            DisplayButtonsPage(currentMode: $currentMode)
+        case .add:
+            AddButtonPage(currentMode: $currentMode)
         case .edit:
             EditButton()
-        case .add:
-            AddButton()
         }
-
-    }
-}
-
-struct ClockIn_Previews: PreviewProvider {
-    static var previews: some View {
-        ClockIn()
     }
 }

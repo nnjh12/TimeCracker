@@ -109,8 +109,8 @@
 			children = (
 				33FE539A2A2A3C420070A917 /* ClockIn.swift */,
 				33FE53942A2A3BDC0070A917 /* DisplayButtons.swift */,
-				33FE53962A2A3C270070A917 /* EditButton.swift */,
 				33FE53982A2A3C300070A917 /* AddButton.swift */,
+				33FE53962A2A3C270070A917 /* EditButton.swift */,
 			);
 			path = ClockIn;
 			sourceTree = "<group>";

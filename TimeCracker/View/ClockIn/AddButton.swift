@@ -8,14 +8,9 @@
 import SwiftUI
 
 /// A view where users can add a button.
-struct AddButton: View {
+struct AddButtonPage: View {
+    @Binding var currentMode: mode
     var body: some View {
         Text("Add Button")
-    }
-}
-
-struct AddButton_Previews: PreviewProvider {
-    static var previews: some View {
-        AddButton()
     }
 }

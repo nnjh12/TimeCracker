@@ -9,8 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var tasks = Tasks()
+    @State private var selection = 1
     var body: some View {
-        DisplayButtons()
+        TabView(selection: $selection) {
+            ClockIn()
+                .tabItem {
+                    Label("Clock In", systemImage: "clock")
+                }
+        }
         .environmentObject(tasks)
     }
     
