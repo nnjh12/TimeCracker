@@ -16,6 +16,8 @@ struct AddButtonPage: View {
             TextLeftAligned(text: "Task's name")
                 .font(.subheadline)
             TaskTextField(placeholder: "Enter your task's name")
+            
+            RoundedButton(text: "Save", color: .green, onClick: {() -> Void in print("done")})
         }
         .padding()
     }

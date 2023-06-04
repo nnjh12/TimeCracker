@@ -21,6 +21,7 @@
 		33FE539D2A2AF9F20070A917 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE539C2A2AF9F20070A917 /* CloseButton.swift */; };
 		33FE53A02A2AFC7E0070A917 /* TaskTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE539F2A2AFC7E0070A917 /* TaskTextField.swift */; };
 		33FE53A22A2AFFD20070A917 /* TextAligned.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE53A12A2AFFD20070A917 /* TextAligned.swift */; };
+		33FE53A42A2C32DB0070A917 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE53A32A2C32DB0070A917 /* RoundedButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		33FE539C2A2AF9F20070A917 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		33FE539F2A2AFC7E0070A917 /* TaskTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTextField.swift; sourceTree = "<group>"; };
 		33FE53A12A2AFFD20070A917 /* TextAligned.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAligned.swift; sourceTree = "<group>"; };
+		33FE53A32A2C32DB0070A917 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 				33FE538A2A28EACC0070A917 /* ClockInButton.swift */,
 				33FE53902A2A2D0A0070A917 /* ClockInOutButton.swift */,
 				33FE539C2A2AF9F20070A917 /* CloseButton.swift */,
+				33FE53A32A2C32DB0070A917 /* RoundedButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				33FE53972A2A3C270070A917 /* EditButton.swift in Sources */,
 				33FE53702A27CF3D0070A917 /* TimeCrackerApp.swift in Sources */,
 				33FE53952A2A3BDC0070A917 /* DisplayButtons.swift in Sources */,
+				33FE53A42A2C32DB0070A917 /* RoundedButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
