@@ -10,14 +10,26 @@ import SwiftUI
 /// A view where users can add a button.
 struct AddButtonPage: View {
     @Binding var currentMode: mode
+    
+    @State private var label: String = ""
+    @State private var ableToClockOut: Bool = false
+    @State private var color: Color = .green
+    
+    
     var body: some View {
         VStack {
             CloseButton(onClick: {() -> Void in currentMode = .display})
             TextLeftAligned(text: "Task's name")
                 .font(.subheadline)
-            TaskTextField(placeholder: "Enter your task's name")
+            TaskTextField(placeholder: "Enter your task's name", text: $label)
+            Toggle("Able to clock out", isOn: $ableToClockOut)
+                .font(.subheadline)
             
-            RoundedButton(text: "Save", color: .green, onClick: {() -> Void in print("done")})
+            TextLeftAligned(text: "Button color")
+                .font(.subheadline)
+            ColorSelector(selectedColor: $color)
+            
+            RoundedButton(text: "Save", color: .green, onClick: {() -> Void in print("\(label) & \(ableToClockOut)"); currentMode = .display})
         }
         .padding()
     }

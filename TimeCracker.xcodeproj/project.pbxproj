@@ -22,6 +22,7 @@
 		33FE53A02A2AFC7E0070A917 /* TaskTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE539F2A2AFC7E0070A917 /* TaskTextField.swift */; };
 		33FE53A22A2AFFD20070A917 /* TextAligned.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE53A12A2AFFD20070A917 /* TextAligned.swift */; };
 		33FE53A42A2C32DB0070A917 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE53A32A2C32DB0070A917 /* RoundedButton.swift */; };
+		33FE53A72A2C39240070A917 /* ColorSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE53A62A2C39240070A917 /* ColorSelector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		33FE539F2A2AFC7E0070A917 /* TaskTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTextField.swift; sourceTree = "<group>"; };
 		33FE53A12A2AFFD20070A917 /* TextAligned.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAligned.swift; sourceTree = "<group>"; };
 		33FE53A32A2C32DB0070A917 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		33FE53A62A2C39240070A917 /* ColorSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSelector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 		33FE53842A28E9530070A917 /* Elements */ = {
 			isa = PBXGroup;
 			children = (
+				33FE53A52A2C390C0070A917 /* Selector */,
 				33FE539E2A2AFC590070A917 /* Text */,
 				33FE53852A28E9CA0070A917 /* Buttons */,
 				33FE53872A28E9FD0070A917 /* Rows */,
@@ -194,6 +197,14 @@
 				33FE53A12A2AFFD20070A917 /* TextAligned.swift */,
 			);
 			path = Text;
+			sourceTree = "<group>";
+		};
+		33FE53A52A2C390C0070A917 /* Selector */ = {
+			isa = PBXGroup;
+			children = (
+				33FE53A62A2C39240070A917 /* ColorSelector.swift */,
+			);
+			path = Selector;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +285,7 @@
 				33FE538B2A28EACC0070A917 /* ClockInButton.swift in Sources */,
 				33FE53912A2A2D0A0070A917 /* ClockInOutButton.swift in Sources */,
 				33FE53992A2A3C300070A917 /* AddButton.swift in Sources */,
+				33FE53A72A2C39240070A917 /* ColorSelector.swift in Sources */,
 				33FE53722A27CF3D0070A917 /* ContentView.swift in Sources */,
 				33FE53972A2A3C270070A917 /* EditButton.swift in Sources */,
 				33FE53702A27CF3D0070A917 /* TimeCrackerApp.swift in Sources */,
