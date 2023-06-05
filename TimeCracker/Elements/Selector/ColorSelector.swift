@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// A view that displays app's custom color selector.
 struct ColorSelector: View {
     @EnvironmentObject var appColors: AppColors
     @Binding var selectedColor: String
@@ -22,7 +23,6 @@ struct ColorSelector: View {
                         .fill(color)
                         .frame(width: 50, height: 50)
                 }
-
             }
         }
     }

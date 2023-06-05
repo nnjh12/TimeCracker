@@ -9,7 +9,6 @@ import SwiftUI
 
 /// A view that displays all the buttons, navigation title, and add button.
 struct DisplayButtonsPage: View {
-    @EnvironmentObject var appColors: AppColors
     @EnvironmentObject var tasks: Tasks
     @Binding var currentMode: mode
     var body: some View {

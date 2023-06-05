@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// A view that displays a rounded button
 struct RoundedButton: View {
     var text: String
     var color: Color
