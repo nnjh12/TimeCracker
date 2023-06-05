@@ -23,6 +23,7 @@
 		33FE53A22A2AFFD20070A917 /* TextAligned.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE53A12A2AFFD20070A917 /* TextAligned.swift */; };
 		33FE53A42A2C32DB0070A917 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE53A32A2C32DB0070A917 /* RoundedButton.swift */; };
 		33FE53A72A2C39240070A917 /* ColorSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE53A62A2C39240070A917 /* ColorSelector.swift */; };
+		33FE53AA2A2D88740070A917 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE53A92A2D88740070A917 /* AppColors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		33FE53A12A2AFFD20070A917 /* TextAligned.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAligned.swift; sourceTree = "<group>"; };
 		33FE53A32A2C32DB0070A917 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		33FE53A62A2C39240070A917 /* ColorSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSelector.swift; sourceTree = "<group>"; };
+		33FE53A92A2D88740070A917 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		33FE537E2A28E8910070A917 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				33FE53A92A2D88740070A917 /* AppColors.swift */,
 				33FE538C2A28EBC90070A917 /* Task.swift */,
 			);
 			path = Model;
@@ -280,6 +283,7 @@
 				33FE539D2A2AF9F20070A917 /* CloseButton.swift in Sources */,
 				33FE538D2A28EBC90070A917 /* Task.swift in Sources */,
 				33FE539B2A2A3C420070A917 /* ClockIn.swift in Sources */,
+				33FE53AA2A2D88740070A917 /* AppColors.swift in Sources */,
 				33FE53A02A2AFC7E0070A917 /* TaskTextField.swift in Sources */,
 				33FE53A22A2AFFD20070A917 /* TextAligned.swift in Sources */,
 				33FE538B2A28EACC0070A917 /* ClockInButton.swift in Sources */,

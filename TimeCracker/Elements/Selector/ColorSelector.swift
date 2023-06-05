@@ -8,33 +8,15 @@
 import SwiftUI
 
 struct ColorSelector: View {
-    @Binding var selectedColor: Color
-    let colors: [Color] = [.red, .orange, .yellow, .green, .blue, .purple]
-    func convertColorToString(color: Color) -> String {
-        switch color {
-        case .red:
-            return "red"
-        case .orange:
-            return "orange"
-        case .yellow:
-            return "yellow"
-        case .green:
-            return "green"
-        case .blue:
-            return "blue"
-        case .purple:
-            return "purple"
-        default:
-            return "not an app color"
-        }
-    }
-    
-    
+    @EnvironmentObject var appColors: AppColors
+    @Binding var selectedColor: (String, Color)
+
     var body: some View {
         HStack(spacing: 10) {
-            ForEach(colors, id: \.self) { color in
+            ForEach(appColors.appColors, id: \.colorName) { colorName, color in
                 Button {
-                    self.selectedColor = color
+                    self.selectedColor = (colorName, color)
+                    print(colorName)
                 } label: {
                     Circle()
                         .fill(color)

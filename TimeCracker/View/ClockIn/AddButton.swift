@@ -13,7 +13,7 @@ struct AddButtonPage: View {
     
     @State private var label: String = ""
     @State private var ableToClockOut: Bool = false
-    @State private var color: Color = .green
+    @State private var color: (String, Color) = ("white", .white)
     
     
     var body: some View {
@@ -29,7 +29,7 @@ struct AddButtonPage: View {
                 .font(.subheadline)
             ColorSelector(selectedColor: $color)
             
-            RoundedButton(text: "Save", color: .green, onClick: {() -> Void in print("\(label) & \(ableToClockOut)"); currentMode = .display})
+            RoundedButton(text: "Save", color: .green, onClick: {() -> Void in print("\(label) & \(ableToClockOut) & \(color.1)"); currentMode = .display})
         }
         .padding()
     }

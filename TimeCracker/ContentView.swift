@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var tasks = Tasks()
+    @StateObject var appColors = AppColors()
     @State private var selection = 1
     var body: some View {
         TabView(selection: $selection) {
@@ -18,6 +19,7 @@ struct ContentView: View {
                 }
         }
         .environmentObject(tasks)
+        .environmentObject(appColors)
     }
     
 }
