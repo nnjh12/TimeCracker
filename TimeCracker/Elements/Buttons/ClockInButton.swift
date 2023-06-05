@@ -23,7 +23,7 @@ struct ClockInButtonUI: View {
     
     var body: some View {
         Button {
-            clockIn()
+//            clockIn()
         } label: {
             Text(label)
                 .frame(width: 150, height: 150)
@@ -32,6 +32,12 @@ struct ClockInButtonUI: View {
                 .background(appColors.convertStringToColor(colorName: color))
                 .clipShape(Circle())
         }
+        .simultaneousGesture(LongPressGesture().onEnded { _ in
+            print("looong pressed")
+        })
+        .simultaneousGesture(TapGesture().onEnded({ _ in
+            clockIn()
+        }))
     }
 }
 

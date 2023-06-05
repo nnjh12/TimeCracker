@@ -36,7 +36,7 @@ struct AddButtonPage: View {
             
             // Button color selection field
             TextLeftAligned(text: "Button color")
-                .font(.subheadline)
+                .font(.subheadline) 
             ColorSelector(selectedColor: $color)
             
             // Save button
