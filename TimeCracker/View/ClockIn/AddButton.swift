@@ -9,12 +9,12 @@ import SwiftUI
 
 /// A view where users can add a button.
 struct AddButtonPage: View {
+    @EnvironmentObject var tasks: Tasks
     @Binding var currentMode: mode
     
     @State private var label: String = ""
     @State private var ableToClockOut: Bool = false
-    @State private var color: (String, Color) = ("white", .white)
-    
+    @State private var color: String = "green"
     
     var body: some View {
         VStack {
@@ -29,7 +29,7 @@ struct AddButtonPage: View {
                 .font(.subheadline)
             ColorSelector(selectedColor: $color)
             
-            RoundedButton(text: "Save", color: .green, onClick: {() -> Void in print("\(label) & \(ableToClockOut) & \(color.1)"); currentMode = .display})
+            RoundedButton(text: "Save", color: .green, onClick: {tasks.addTask(task: Task(label: label, color: color, ableToClockOut: ableToClockOut)); currentMode = .display})
         }
         .padding()
     }

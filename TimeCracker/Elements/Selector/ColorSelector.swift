@@ -9,13 +9,13 @@ import SwiftUI
 
 struct ColorSelector: View {
     @EnvironmentObject var appColors: AppColors
-    @Binding var selectedColor: (String, Color)
+    @Binding var selectedColor: String
 
     var body: some View {
         HStack(spacing: 10) {
             ForEach(appColors.appColors, id: \.colorName) { colorName, color in
                 Button {
-                    self.selectedColor = (colorName, color)
+                    self.selectedColor = colorName
                     print(colorName)
                 } label: {
                     Circle()
