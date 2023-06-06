@@ -32,6 +32,7 @@ struct DisplayButtonsPage: View {
 struct DisplayButtons: View {
     let columns = [GridItem(.flexible()), GridItem(.flexible())]
     let tasks: [Task]
+    
     var body: some View {
         ScrollView {
             LazyVGrid(columns: columns) {
@@ -39,7 +40,7 @@ struct DisplayButtons: View {
                     if (task.ableToClockOut) {
                         ClockInOutButton(task: task)
                     } else {
-                        ClockInButton(task: task)
+                        ClockInButton(task: task, edit: {(task) -> Void in print("edit \(task.label)")}, delete: {(task) -> Void in print("delete \(task.label)")})
                     }
                 }
             }

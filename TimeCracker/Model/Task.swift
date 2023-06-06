@@ -39,4 +39,10 @@ class Tasks: ObservableObject {
         self.tasks.append(task)
     }
     
+    func deleteTask(task: Task) -> Void {
+        if let index = self.tasks.firstIndex(of: task) {
+            tasks.remove(at: index)
+        }
+    }
+    
 }

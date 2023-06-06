@@ -10,17 +10,20 @@ import SwiftUI
 /// A view that displays a button for task that only needs clock in.
 struct ClockInButton: View {
     var task: Task
+    var edit: (Task) -> Void
+    var delete: (Task) -> Void
+    
     var body: some View {
         ClockInButtonUI(label: task.label, color: task.color, clockIn: task.clockIn)
             .contentShape(ContentShapeKinds.contextMenuPreview, Circle())
             .contextMenu {
                     Button {
-                        // Edit
+                        edit(task)
                     } label: {
                         Label("Edit", systemImage: "pencil")
                     }
                     Button {
-                        // Delete
+                        delete(task)
                     } label: {
                         Label("Delete", systemImage: "trash")
                     }
