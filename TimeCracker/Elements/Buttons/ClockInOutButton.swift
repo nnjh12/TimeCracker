@@ -12,6 +12,19 @@ struct ClockInOutButton: View {
     var task: Task
     var body: some View {
         ClockInOutButtonUI(label: task.label, color: task.color, clockIn: task.clockIn, clockOut: task.clockOut)
+            .contentShape(ContentShapeKinds.contextMenuPreview, Circle())
+            .contextMenu {
+                    Button {
+                        // Edit
+                    } label: {
+                        Label("Edit", systemImage: "pencil")
+                    }
+                    Button {
+                        // Delete
+                    } label: {
+                        Label("Delete", systemImage: "trash")
+                    }
+            }
     }
 }
 
@@ -29,8 +42,8 @@ struct ClockInOutButtonUI: View {
         let background = LinearGradient(stops: [.init(color: .yellow, location: gradLoc), .init(color: appColors.convertStringToColor(colorName: color), location: gradLoc)], startPoint: .bottom, endPoint: .top)
         
         Button {
-//            isClockedIn ? clockOut() : clockIn()
-//            isClockedIn.toggle()
+            isClockedIn ? clockOut() : clockIn()
+            isClockedIn.toggle()
         } label: {
             Text(label)
                 .frame(width: 150, height: 150)
@@ -39,13 +52,6 @@ struct ClockInOutButtonUI: View {
                 .background(background)
                 .clipShape(Circle())
         }
-        .simultaneousGesture(LongPressGesture().onEnded { _ in
-            print("looong pressed")
-        })
-        .simultaneousGesture(TapGesture().onEnded({ _ in
-            isClockedIn ? clockOut() : clockIn()
-            isClockedIn.toggle()
-        }))
     }
 }
 
