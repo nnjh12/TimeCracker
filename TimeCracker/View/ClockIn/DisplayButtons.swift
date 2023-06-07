@@ -10,10 +10,10 @@ import SwiftUI
 /// A view that displays all the buttons, navigation title, and add button.
 struct DisplayButtonsPage: View {
     @EnvironmentObject var tasks: Tasks
-    @Binding var currentMode: mode
+    @Binding var currentMode: Mode
     var body: some View {
         NavigationView {
-            DisplayButtons(tasks: tasks.tasks, delete: tasks.deleteTask)
+            DisplayButtons(tasks: tasks.tasks, delete: tasks.deleteTask, edit: {(task) -> Void in print("edit") })
             .navigationTitle("Clock In")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -33,15 +33,16 @@ struct DisplayButtons: View {
     let columns = [GridItem(.flexible()), GridItem(.flexible())]
     let tasks: [Task]
     let delete: (Task) -> Void
+    let edit: (Task) -> Void
     
     var body: some View {
         ScrollView {
             LazyVGrid(columns: columns) {
                 ForEach(tasks) {task in
                     if (task.ableToClockOut) {
-                        ClockInOutButton(task: task, edit: {(task) -> Void in print("edit \(task.label)")}, delete: delete)
+                        ClockInOutButton(task: task, edit: edit, delete: delete)
                     } else {
-                        ClockInButton(task: task, edit: {(task) -> Void in print("edit \(task.label)")}, delete: delete)
+                        ClockInButton(task: task, edit: edit, delete: delete)
                     }
                 }
             }

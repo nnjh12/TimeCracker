@@ -10,7 +10,7 @@ import SwiftUI
 /// A view where users can add a button.
 struct AddButtonPage: View {
     @EnvironmentObject var tasks: Tasks
-    @Binding var currentMode: mode
+    @Binding var currentMode: Mode
     
     @State private var label: String = ""
     @State private var ableToClockOut: Bool = false
