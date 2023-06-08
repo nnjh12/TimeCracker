@@ -11,6 +11,7 @@ import SwiftUI
 struct ClockInOutButton: View {
     @EnvironmentObject var appColors: AppColors
     @EnvironmentObject var tasks: Tasks
+    @EnvironmentObject var logs: Logs
     @State private var isClockedIn: Bool = false
     @State private var isEditMode: Bool = false
     
@@ -23,7 +24,7 @@ struct ClockInOutButton: View {
         
         // Clock In and Out Button
         Button {
-            isClockedIn ? task.clockOut() : task.clockIn()
+            isClockedIn ? task.clockOut() : task.clockIn(logs: logs)
             isClockedIn.toggle()
         } label: {
             Text(task.label)

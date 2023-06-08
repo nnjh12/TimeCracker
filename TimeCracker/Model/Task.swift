@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SwiftUI
 
 struct Task: Identifiable, Hashable {
     var id = UUID().uuidString // is it better to have firebase id?
@@ -14,8 +13,10 @@ struct Task: Identifiable, Hashable {
     var color: String
     var ableToClockOut: Bool
     
-    func clockIn() {
+    func clockIn(logs: Logs) {
         print("\(self.label) clockIn")
+        let log = Log(taskId: self.id, clockInTime: Date(), clockOutTime: nil)
+        logs.addLog(log: log)
     }
     func clockOut() {
         print("\(self.label) clockOut")

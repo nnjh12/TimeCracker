@@ -9,16 +9,25 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var tasks = Tasks()
+    @StateObject var logs = Logs()
     @StateObject var appColors = AppColors()
     @State private var selection = 1
     var body: some View {
         TabView(selection: $selection) {
-            ClockIn()
+            ClockInView()
                 .tabItem {
                     Label("Clock In", systemImage: "clock")
                 }
+                .tag(1)
+            
+            LogView()
+                .tabItem {
+                    Label("Logs", systemImage: "line.3.horizontal")
+                }
+                .tag(2)
         }
         .environmentObject(tasks)
+        .environmentObject(logs)
         .environmentObject(appColors)
     }
     

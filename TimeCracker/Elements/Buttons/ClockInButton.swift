@@ -11,13 +11,14 @@ import SwiftUI
 struct ClockInButton: View {
     @EnvironmentObject var appColors: AppColors
     @EnvironmentObject var tasks: Tasks
+    @EnvironmentObject var logs: Logs
     @State private var isEditMode: Bool = false
     var task: Task
         
     var body: some View {
         // Clock In Button
         Button {
-            task.clockIn()
+            task.clockIn(logs: logs)
         } label: {
             Text(task.label)
                 .frame(width: 150, height: 150)
