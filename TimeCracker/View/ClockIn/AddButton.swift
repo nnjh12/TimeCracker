@@ -10,7 +10,7 @@ import SwiftUI
 /// A view where users can add a button.
 struct AddButtonPage: View {
     @EnvironmentObject var tasks: Tasks
-    @Binding var currentMode: Mode
+    @Binding var isAddMode: Bool
     
     @State private var label: String = ""
     @State private var ableToClockOut: Bool = false
@@ -19,7 +19,7 @@ struct AddButtonPage: View {
     var body: some View {
         VStack {
             // Close Button
-            CloseButton(onClick: {() -> Void in currentMode = .display})
+            CloseButton(onClick: {() -> Void in isAddMode = false})
             
             // Title
             TextCenterAligned(text: "Add a new task")
@@ -40,7 +40,7 @@ struct AddButtonPage: View {
             ColorSelector(selectedColor: $color)
             
             // Save button
-            RoundedButton(text: "Save", color: .green, onClick: {tasks.addTask(task: Task(label: label, color: color, ableToClockOut: ableToClockOut)); currentMode = .display})
+            RoundedButton(text: "Save", color: .green, onClick: {tasks.addTask(task: Task(label: label, color: color, ableToClockOut: ableToClockOut)); isAddMode = false})
         }
         .padding()
     }

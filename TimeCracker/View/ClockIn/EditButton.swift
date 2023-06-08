@@ -9,13 +9,16 @@ import SwiftUI
 
 /// A view where users can their button features.
 struct EditButton: View {
+    var task: Task
+    @Binding var isEditMode: Bool
+    
     var body: some View {
-        Text("Edit Button")
-    }
-}
-
-struct EditButton_Previews: PreviewProvider {
-    static var previews: some View {
-        EditButton()
+        VStack {
+            // Close Button
+            CloseButton(onClick: {() -> Void in isEditMode = false})
+            
+            Text("Edit Button")
+            Text(task.label)
+        }
     }
 }

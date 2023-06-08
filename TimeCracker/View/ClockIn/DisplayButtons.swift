@@ -10,7 +10,7 @@ import SwiftUI
 /// A view that displays all the buttons, navigation title, and add button.
 struct DisplayButtonsPage: View {
     @EnvironmentObject var tasks: Tasks
-    @Binding var currentMode: Mode
+    @Binding var isAddMode: Bool
     var body: some View {
         NavigationView {
             DisplayButtons(tasks: tasks.tasks, delete: tasks.deleteTask, edit: {(task) -> Void in print("edit") })
@@ -18,7 +18,7 @@ struct DisplayButtonsPage: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
-                        currentMode = .add
+                        isAddMode = true
                     } label: {
                         Image(systemName: "plus")
                     }
@@ -40,9 +40,9 @@ struct DisplayButtons: View {
             LazyVGrid(columns: columns) {
                 ForEach(tasks) {task in
                     if (task.ableToClockOut) {
-                        ClockInOutButton(task: task, edit: edit, delete: delete)
+                        ClockInOutButton(task: task)
                     } else {
-                        ClockInButton(task: task, edit: edit, delete: delete)
+                        ClockInButton(task: task)
                     }
                 }
             }

@@ -9,57 +9,50 @@ import SwiftUI
 
 /// A view that displays a button for task that needs both clock in and out.
 struct ClockInOutButton: View {
-    var task: Task
-    var edit: (Task) -> Void
-    var delete: (Task) -> Void
-    
-    var body: some View {
-        ClockInOutButtonUI(label: task.label, color: task.color, clockIn: task.clockIn, clockOut: task.clockOut)
-            .contentShape(ContentShapeKinds.contextMenuPreview, Circle())
-            .contextMenu {
-                    Button {
-                        edit(task)
-                    } label: {
-                        Label("Edit", systemImage: "pencil")
-                    }
-                    Button {
-                        delete(task)
-                    } label: {
-                        Label("Delete", systemImage: "trash")
-                    }
-            }
-    }
-}
-
-struct ClockInOutButtonUI: View {
     @EnvironmentObject var appColors: AppColors
+    @EnvironmentObject var tasks: Tasks
     @State private var isClockedIn: Bool = false
-    var label: String
-    var color: String
-    var clockIn: () -> Void // need to pass parameter?
-    var clockOut: () -> Void // need to pass parameter?
+    @State private var isEditMode: Bool = false
+    
+    var task: Task
     
     var body: some View {
         // gradientLocation is higher when clockedIn
         let gradLoc = isClockedIn ? 0.3 : 0.1
-        let background = LinearGradient(stops: [.init(color: .yellow, location: gradLoc), .init(color: appColors.convertStringToColor(colorName: color), location: gradLoc)], startPoint: .bottom, endPoint: .top)
+        let background = LinearGradient(stops: [.init(color: .yellow, location: gradLoc), .init(color: appColors.convertStringToColor(colorName: task.color), location: gradLoc)], startPoint: .bottom, endPoint: .top)
         
+        // Clock In and Out Button
         Button {
-            isClockedIn ? clockOut() : clockIn()
+            isClockedIn ? task.clockOut() : task.clockIn()
             isClockedIn.toggle()
         } label: {
-            Text(label)
+            Text(task.label)
                 .frame(width: 150, height: 150)
                 .font(.title2)
                 .foregroundColor(.white)
                 .background(background)
                 .clipShape(Circle())
         }
-    }
-}
-
-struct ClockInOutButtonUI_Previews: PreviewProvider {
-    static var previews: some View {
-        ClockInOutButtonUI(label: "clockInOut", color: "green", clockIn: {() -> Void in print("clockIn")}, clockOut: {() -> Void in print("clockOut")})
+        .contentShape(ContentShapeKinds.contextMenuPreview, Circle())
+        // When user press and hold the button, options to edit and delete will appear.
+        .contextMenu {
+                // Button for edit
+                Button {
+                    isEditMode.toggle()
+                    
+                } label: {
+                    Label("Edit", systemImage: "pencil")
+                }
+                // Button for delete
+                Button {
+                    tasks.deleteTask(task: task)
+                } label: {
+                    Label("Delete", systemImage: "trash")
+                }
+        }
+        // When user select edit, edit view will appear on top of current view.
+        .sheet(isPresented: $isEditMode) {
+            EditButton(task: task, isEditMode: $isEditMode)
+        }
     }
 }
