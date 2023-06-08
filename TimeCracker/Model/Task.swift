@@ -45,6 +45,14 @@ class Tasks: ObservableObject {
         }
     }
     
+    func editTask(task: Task, label: String, color: String, ableToClockOut: Bool ) -> Void {
+        if let index = self.tasks.firstIndex(of: task) {
+            tasks[index].label = label
+            tasks[index].color = color
+            tasks[index].ableToClockOut = ableToClockOut
+        }
+    }
+    
 }
 
 

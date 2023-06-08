@@ -39,7 +39,6 @@ struct ClockInOutButton: View {
                 // Button for edit
                 Button {
                     isEditMode.toggle()
-                    
                 } label: {
                     Label("Edit", systemImage: "pencil")
                 }
