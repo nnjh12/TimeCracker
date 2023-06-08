@@ -22,6 +22,10 @@ struct ColorSelector: View {
                     Circle()
                         .fill(color)
                         .frame(width: 50, height: 50)
+                        .overlay(
+                            Circle()
+                                .stroke(.black, lineWidth: colorName == selectedColor ? 3 : 0)
+                        )
                 }
             }
         }
