@@ -8,19 +8,11 @@
 import Foundation
 
 struct Task: Identifiable, Hashable {
-    var id = UUID().uuidString // is it better to have firebase id?
+    var id: String = UUID().uuidString // is it better to have firebase id?
     var label: String
     var color: String
     var ableToClockOut: Bool
-    
-    func clockIn(logs: Logs) {
-        print("\(self.label) clockIn")
-        let log = Log(taskId: self.id, clockInTime: Date(), clockOutTime: nil)
-        logs.addLog(log: log)
-    }
-    func clockOut() {
-        print("\(self.label) clockOut")
-    }
+    var notDeleted: Bool = true
 }
 
 class Tasks: ObservableObject {
@@ -40,14 +32,14 @@ class Tasks: ObservableObject {
         self.tasks.append(task)
     }
     
-    func deleteTask(task: Task) -> Void {
-        if let index = self.tasks.firstIndex(of: task) {
-            tasks.remove(at: index)
+    func deleteTask(id: String) -> Void {
+        if let index = self.tasks.firstIndex(where: { $0.id == id }) {
+            tasks[index].notDeleted = false
         }
     }
     
-    func editTask(task: Task, label: String, color: String, ableToClockOut: Bool ) -> Void {
-        if let index = self.tasks.firstIndex(of: task) {
+    func editTask(id: String, label: String, color: String, ableToClockOut: Bool ) -> Void {
+        if let index = self.tasks.firstIndex(where: { $0.id == id }) {
             tasks[index].label = label
             tasks[index].color = color
             tasks[index].ableToClockOut = ableToClockOut

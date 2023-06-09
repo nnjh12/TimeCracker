@@ -14,11 +14,17 @@ struct ClockInButton: View {
     @EnvironmentObject var logs: Logs
     @State private var isEditMode: Bool = false
     var task: Task
+    
+    func clockIn(task: Task) {
+        print("\(task.label) clockIn")
+        let log = Log(taskId: task.id, clockInTime: Date(), clockOutTime: nil)
+        logs.addLog(log: log)
+    }
         
     var body: some View {
         // Clock In Button
         Button {
-            task.clockIn(logs: logs)
+            self.clockIn(task: task)
         } label: {
             Text(task.label)
                 .frame(width: 150, height: 150)
@@ -38,7 +44,7 @@ struct ClockInButton: View {
                 }
                 // Button for delete
                 Button {
-                    tasks.deleteTask(task: task)
+                    tasks.deleteTask(id: task.id)
                 } label: {
                     Label("Delete", systemImage: "trash")
                 }

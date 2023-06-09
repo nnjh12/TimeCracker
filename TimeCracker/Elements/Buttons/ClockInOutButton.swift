@@ -13,9 +13,25 @@ struct ClockInOutButton: View {
     @EnvironmentObject var tasks: Tasks
     @EnvironmentObject var logs: Logs
     @State private var isClockedIn: Bool = false
+    @State private var clockedInId: String = ""
     @State private var isEditMode: Bool = false
     
     var task: Task
+    
+    func clockIn(task: Task) {
+        print("\(task.label) clockIn")
+        let log = Log(taskId: task.id, clockInTime: Date(), clockOutTime: nil)
+        logs.addLog(log: log)
+        isClockedIn.toggle()
+        clockedInId = log.id
+    }
+    
+    func clockOut(task: Task) {
+        print("\(task.label) clockOut")
+        logs.addClockOutTime(id: clockedInId, clockOutTime: Date())
+        isClockedIn.toggle()
+        clockedInId = ""
+    }
     
     var body: some View {
         // gradientLocation is higher when clockedIn
@@ -24,8 +40,7 @@ struct ClockInOutButton: View {
         
         // Clock In and Out Button
         Button {
-            isClockedIn ? task.clockOut() : task.clockIn(logs: logs)
-            isClockedIn.toggle()
+            isClockedIn ? self.clockOut(task: task) : self.clockIn(task: task)
         } label: {
             Text(task.label)
                 .frame(width: 150, height: 150)
@@ -45,7 +60,7 @@ struct ClockInOutButton: View {
                 }
                 // Button for delete
                 Button {
-                    tasks.deleteTask(task: task)
+                    tasks.deleteTask(id: task.id)
                 } label: {
                     Label("Delete", systemImage: "trash")
                 }

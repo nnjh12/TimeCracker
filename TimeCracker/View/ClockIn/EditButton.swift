@@ -49,7 +49,7 @@ struct EditButton: View {
             ColorSelector(selectedColor: $color)
             
             // Save button
-            RoundedButton(text: "Save", color: .green, onClick: {tasks.editTask(task: task, label: label, color: color, ableToClockOut: ableToClockOut); isEditMode = false})
+            RoundedButton(text: "Save", color: .green, onClick: {tasks.editTask(id: task.id, label: label, color: color, ableToClockOut: ableToClockOut); isEditMode = false})
         }
     }
 }

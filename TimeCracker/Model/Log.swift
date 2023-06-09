@@ -8,7 +8,7 @@
 import Foundation
 
 struct Log: Identifiable, Hashable {
-    var id = UUID().uuidString
+    var id: String = UUID().uuidString
     var taskId: String
     var clockInTime: Date?
     var clockOutTime: Date?
@@ -35,16 +35,22 @@ class Logs: ObservableObject {
         self.logs.append(log)
     }
     
-    func deleteLog(log: Log) -> Void {
-        if let index = self.logs.firstIndex(of: log) {
+    func deleteLog(id: String) -> Void {
+        if let index = self.logs.firstIndex(where: { $0.id == id }) {
             logs.remove(at: index)
         }
     }
     
-    func editLog(log: Log, clockIn: Date, clockOut: Date) -> Void {
-        if let index = self.logs.firstIndex(of: log) {
-            logs[index].clockInTime = clockIn
-            logs[index].clockOutTime = clockOut
+    func editLog(id: String, clockInTime: Date, clockOutTime: Date) -> Void {
+        if let index = self.logs.firstIndex(where: { $0.id == id }) {
+            logs[index].clockInTime = clockInTime
+            logs[index].clockOutTime = clockOutTime
+        }
+    }
+    
+    func addClockOutTime(id: String, clockOutTime: Date) -> Void {
+        if let index = self.logs.firstIndex(where: { $0.id == id }) {
+            logs[index].clockOutTime = clockOutTime
         }
     }
 }

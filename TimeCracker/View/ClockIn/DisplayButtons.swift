@@ -13,7 +13,7 @@ struct DisplayButtonsPage: View {
     @Binding var isAddMode: Bool
     var body: some View {
         NavigationView {
-            DisplayButtons(tasks: tasks.tasks, delete: tasks.deleteTask, edit: {(task) -> Void in print("edit") })
+            DisplayButtons(tasks: tasks.tasks, delete: tasks.deleteTask)
             .navigationTitle("Clock In")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -32,17 +32,18 @@ struct DisplayButtonsPage: View {
 struct DisplayButtons: View {
     let columns = [GridItem(.flexible()), GridItem(.flexible())]
     let tasks: [Task]
-    let delete: (Task) -> Void
-    let edit: (Task) -> Void
+    let delete: (String) -> Void
     
     var body: some View {
         ScrollView {
             LazyVGrid(columns: columns) {
                 ForEach(tasks) {task in
-                    if (task.ableToClockOut) {
-                        ClockInOutButton(task: task)
-                    } else {
-                        ClockInButton(task: task)
+                    if task.notDeleted {
+                        if (task.ableToClockOut) {
+                            ClockInOutButton(task: task)
+                        } else {
+                            ClockInButton(task: task)
+                        }
                     }
                 }
             }
