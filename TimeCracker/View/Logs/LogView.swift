@@ -12,7 +12,15 @@ struct LogView: View {
     @EnvironmentObject var logs: Logs
     
     var body: some View {
-        DisplayLogs(tasks: tasks.tasks, logs: logs.logs)
+        NavigationView {
+            VStack(spacing: 0) {
+                LogRowHead()
+                Divider()
+                DisplayLogs(tasks: tasks.tasks, logs: logs.logs)
+                .navigationTitle("Logs")
+            }
+//            .padding()
+        }
     }
 }
 
@@ -21,10 +29,11 @@ struct DisplayLogs: View {
     var logs: [Log]
     
     var body: some View {
-        ScrollView {
-            ForEach(logs) { log in
-                LogRow(tasks: tasks, log: log)
-            }
+        List(logs) { log in
+            LogRow(tasks: tasks, log: log)
         }
+        .frame(maxWidth: .infinity)
+        .edgesIgnoringSafeArea(.all)
+        .listStyle(PlainListStyle())
     }
 }

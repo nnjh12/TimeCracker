@@ -16,7 +16,7 @@ struct Log: Identifiable, Hashable {
     func convertDateToString(date:Date) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
-        dateFormatter.dateFormat = "MM-dd-yyyy h:mm a"
+        dateFormatter.dateFormat = "MM-dd-yy h:mm a"
         if date == Date(timeIntervalSince1970: 0) {
             return ""
         }

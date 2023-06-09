@@ -27,6 +27,7 @@
 		33FE53AC2A3203B50070A917 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE53AB2A3203B50070A917 /* Log.swift */; };
 		33FE53AE2A324B280070A917 /* LogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE53AD2A324B280070A917 /* LogView.swift */; };
 		33FE53B02A324B460070A917 /* LogRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE53AF2A324B460070A917 /* LogRow.swift */; };
+		33FE53B42A32C6070070A917 /* LogRowHead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE53B32A32C6070070A917 /* LogRowHead.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		33FE53AB2A3203B50070A917 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		33FE53AD2A324B280070A917 /* LogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogView.swift; sourceTree = "<group>"; };
 		33FE53AF2A324B460070A917 /* LogRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogRow.swift; sourceTree = "<group>"; };
+		33FE53B32A32C6070070A917 /* LogRowHead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogRowHead.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				33FE53AD2A324B280070A917 /* LogView.swift */,
+				33FE53B32A32C6070070A917 /* LogRowHead.swift */,
 				33FE53AF2A324B460070A917 /* LogRow.swift */,
 			);
 			path = Logs;
@@ -290,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33FE539D2A2AF9F20070A917 /* CloseButton.swift in Sources */,
+				33FE53B42A32C6070070A917 /* LogRowHead.swift in Sources */,
 				33FE538D2A28EBC90070A917 /* Task.swift in Sources */,
 				33FE539B2A2A3C420070A917 /* ClockInView.swift in Sources */,
 				33FE53AA2A2D88740070A917 /* AppColors.swift in Sources */,
