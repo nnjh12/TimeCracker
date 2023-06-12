@@ -13,9 +13,9 @@ struct LogRowHead: View {
             Text("Clock In")
                 .frame(width: 130, alignment: .leading)
             Text("Clock Out")
-                .frame(width: 130, alignment: .leading)
+                .frame(width: 150, alignment: .leading)
             Text("Task")
-                .frame(width: 90, alignment: .leading)
+                .frame(width: 70, alignment: .leading)
         }
         .padding(.bottom)
     }
