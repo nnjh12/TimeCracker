@@ -22,6 +22,7 @@ struct ColorSelector: View {
                     Circle()
                         .fill(color)
                         .frame(width: 50, height: 50)
+                        // The border will be displayed in the selectes color.
                         .overlay(
                             Circle()
                                 .stroke(.black, lineWidth: colorName == selectedColor ? 3 : 0)

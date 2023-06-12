@@ -18,6 +18,7 @@ struct ClockInOutButton: View {
     
     var task: Task
     
+    /// A function that registers the clock-in time by generating a new log entry which is added to the existing logs.
     func clockIn(task: Task) {
         print("\(task.label) clockIn")
         let log = Log(taskId: task.id, clockInTime: Date(), clockOutTime: nil)
@@ -26,6 +27,7 @@ struct ClockInOutButton: View {
         clockedInId = log.id
     }
     
+    /// A function that captures the clock-out time and updates it in the previously clock-in log.
     func clockOut(task: Task) {
         print("\(task.label) clockOut")
         logs.addClockOutTime(id: clockedInId, clockOutTime: Date())
@@ -34,11 +36,11 @@ struct ClockInOutButton: View {
     }
     
     var body: some View {
-        // gradientLocation is higher when clockedIn
+        // Gradient location is increased when clocked in.
         let gradLoc = isClockedIn ? 0.3 : 0.1
         let background = LinearGradient(stops: [.init(color: .yellow, location: gradLoc), .init(color: appColors.convertStringToColor(colorName: task.color), location: gradLoc)], startPoint: .bottom, endPoint: .top)
         
-        // Clock In and Out Button
+        // Clock in and out button
         Button {
             isClockedIn ? self.clockOut(task: task) : self.clockIn(task: task)
         } label: {

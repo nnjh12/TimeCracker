@@ -15,6 +15,7 @@ struct ClockInButton: View {
     @State private var isEditMode: Bool = false
     var task: Task
     
+    /// A function that registers the clock-in time by generating a new log entry which is added to the existing logs.
     func clockIn(task: Task) {
         print("\(task.label) clockIn")
         let log = Log(taskId: task.id, clockInTime: Date(), clockOutTime: nil)
@@ -22,7 +23,7 @@ struct ClockInButton: View {
     }
         
     var body: some View {
-        // Clock In Button
+        // Clock in button
         Button {
             self.clockIn(task: task)
         } label: {

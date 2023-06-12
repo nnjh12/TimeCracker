@@ -1,5 +1,5 @@
 //
-//  LogRowHead.swift
+//  LogRowHeader.swift
 //  TimeCracker
 //
 //  Created by Gina on 6/8/23.
@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-struct LogRowHead: View {
+/// A view that displays log row's header.
+struct LogRowHeader: View {
     var body: some View {
         HStack {
             Text("Clock In")
@@ -18,11 +19,5 @@ struct LogRowHead: View {
                 .frame(width: 70, alignment: .leading)
         }
         .padding(.bottom)
-    }
-}
-
-struct LogRowHead_Previews: PreviewProvider {
-    static var previews: some View {
-        LogRowHead()
     }
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 /// A view where users can add a button.
-struct AddButtonPage: View {
+struct AddButtonView: View {
     @EnvironmentObject var tasks: Tasks
     @Binding var isAddMode: Bool
     

@@ -13,13 +13,15 @@ struct EditButton: View {
     @Binding var isEditMode: Bool
 
     private var task: Task
+    
+    // Variables for updated values
     @State private var label: String
     @State private var color: String
     @State private var ableToClockOut: Bool
     
     init(task: Task, isEditMode: Binding<Bool>) {
-        self.task = task
         self._isEditMode = isEditMode
+        self.task = task
         self.label = task.label
         self.color = task.color
         self.ableToClockOut = task.ableToClockOut

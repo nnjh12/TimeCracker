@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// A view that displays text aligned to the left.
 struct TextLeftAligned: View {
     var text: String
     var body: some View {
@@ -17,6 +18,7 @@ struct TextLeftAligned: View {
     }
 }
 
+/// A view that displays text aligned to the right.
 struct TextRightAligned: View {
     var text: String
     var body: some View {
@@ -27,6 +29,7 @@ struct TextRightAligned: View {
     }
 }
 
+/// A view that displays text aligned to the center.
 struct TextCenterAligned: View {
     var text: String
     var body: some View {

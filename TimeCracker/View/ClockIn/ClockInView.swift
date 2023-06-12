@@ -1,5 +1,5 @@
 //
-//  ClockIn.swift
+//  ClockInView.swift
 //  TimeCracker
 //
 //  Created by Gina on 6/2/23.
@@ -11,9 +11,10 @@ import SwiftUI
 struct ClockInView: View {
     @State private var isAddMode: Bool = false
     var body: some View {
-        DisplayButtonsPage(isAddMode: $isAddMode)
+        DisplayButtonsView(isAddMode: $isAddMode)
+            // In add mode, AddButtonView will show up.
             .sheet(isPresented: $isAddMode) {
-                AddButtonPage(isAddMode: $isAddMode)
+                AddButtonView(isAddMode: $isAddMode)
             }
     }
 }

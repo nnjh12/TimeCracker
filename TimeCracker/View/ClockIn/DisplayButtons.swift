@@ -8,13 +8,15 @@
 import SwiftUI
 
 /// A view that displays all the buttons, navigation title, and add button.
-struct DisplayButtonsPage: View {
+struct DisplayButtonsView: View {
     @EnvironmentObject var tasks: Tasks
     @Binding var isAddMode: Bool
     var body: some View {
         NavigationView {
             DisplayButtons(tasks: tasks.tasks, delete: tasks.deleteTask)
+            // A navigation title
             .navigationTitle("Clock In")
+            // An add button on navigation bar
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
@@ -36,11 +38,15 @@ struct DisplayButtons: View {
     
     var body: some View {
         ScrollView {
+            // Display buttons in two columns.
             LazyVGrid(columns: columns) {
                 ForEach(tasks) {task in
+                    // If user delete task, do not display it.
                     if task.notDeleted {
+                        // If task can be clocked out, show ClockInOutButton.
                         if (task.ableToClockOut) {
                             ClockInOutButton(task: task)
+                        // If task cannot be clocked out, show ClockInButton.
                         } else {
                             ClockInButton(task: task)
                         }

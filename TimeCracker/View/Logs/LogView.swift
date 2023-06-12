@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// A Log's main view that displays date selector, task buttons, log header, and all the recorded logs.
 struct LogView: View {
     @EnvironmentObject var tasks: Tasks
     @EnvironmentObject var logs: Logs
@@ -14,16 +15,17 @@ struct LogView: View {
     var body: some View {
         NavigationView {
             VStack(spacing: 0) {
-                LogRowHead()
+                // Log header
+                LogRowHeader()
                 Divider()
                 DisplayLogs(tasks: tasks.tasks, logs: logs.logs)
                 .navigationTitle("Logs")
             }
-//            .padding()
         }
     }
 }
 
+/// A view that displays all logs.
 struct DisplayLogs: View {
     var tasks: [Task]
     var logs: [Log]

@@ -27,7 +27,8 @@
 		33FE53AC2A3203B50070A917 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE53AB2A3203B50070A917 /* Log.swift */; };
 		33FE53AE2A324B280070A917 /* LogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE53AD2A324B280070A917 /* LogView.swift */; };
 		33FE53B02A324B460070A917 /* LogRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE53AF2A324B460070A917 /* LogRow.swift */; };
-		33FE53B42A32C6070070A917 /* LogRowHead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE53B32A32C6070070A917 /* LogRowHead.swift */; };
+		33FE53B42A32C6070070A917 /* LogRowHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE53B32A32C6070070A917 /* LogRowHeader.swift */; };
+		33FE53B62A3773650070A917 /* TaskButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE53B52A3773650070A917 /* TaskButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,7 +53,8 @@
 		33FE53AB2A3203B50070A917 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		33FE53AD2A324B280070A917 /* LogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogView.swift; sourceTree = "<group>"; };
 		33FE53AF2A324B460070A917 /* LogRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogRow.swift; sourceTree = "<group>"; };
-		33FE53B32A32C6070070A917 /* LogRowHead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogRowHead.swift; sourceTree = "<group>"; };
+		33FE53B32A32C6070070A917 /* LogRowHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogRowHeader.swift; sourceTree = "<group>"; };
+		33FE53B52A3773650070A917 /* TaskButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,7 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				33FE53AD2A324B280070A917 /* LogView.swift */,
-				33FE53B32A32C6070070A917 /* LogRowHead.swift */,
+				33FE53B32A32C6070070A917 /* LogRowHeader.swift */,
 				33FE53AF2A324B460070A917 /* LogRow.swift */,
 			);
 			path = Logs;
@@ -187,6 +189,7 @@
 				33FE53902A2A2D0A0070A917 /* ClockInOutButton.swift */,
 				33FE539C2A2AF9F20070A917 /* CloseButton.swift */,
 				33FE53A32A2C32DB0070A917 /* RoundedButton.swift */,
+				33FE53B52A3773650070A917 /* TaskButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -293,7 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33FE539D2A2AF9F20070A917 /* CloseButton.swift in Sources */,
-				33FE53B42A32C6070070A917 /* LogRowHead.swift in Sources */,
+				33FE53B42A32C6070070A917 /* LogRowHeader.swift in Sources */,
 				33FE538D2A28EBC90070A917 /* Task.swift in Sources */,
 				33FE539B2A2A3C420070A917 /* ClockInView.swift in Sources */,
 				33FE53AA2A2D88740070A917 /* AppColors.swift in Sources */,
@@ -302,6 +305,7 @@
 				33FE53AC2A3203B50070A917 /* Log.swift in Sources */,
 				33FE538B2A28EACC0070A917 /* ClockInButton.swift in Sources */,
 				33FE53912A2A2D0A0070A917 /* ClockInOutButton.swift in Sources */,
+				33FE53B62A3773650070A917 /* TaskButton.swift in Sources */,
 				33FE53992A2A3C300070A917 /* AddButton.swift in Sources */,
 				33FE53A72A2C39240070A917 /* ColorSelector.swift in Sources */,
 				33FE53B02A324B460070A917 /* LogRow.swift in Sources */,
