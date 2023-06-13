@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33DB85002A38DED400E805EE /* TaskFilterButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DB84FF2A38DED400E805EE /* TaskFilterButtons.swift */; };
 		33FE53702A27CF3D0070A917 /* TimeCrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE536F2A27CF3D0070A917 /* TimeCrackerApp.swift */; };
 		33FE53722A27CF3D0070A917 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE53712A27CF3D0070A917 /* ContentView.swift */; };
 		33FE53742A27CF3E0070A917 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33FE53732A27CF3E0070A917 /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33DB84FF2A38DED400E805EE /* TaskFilterButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskFilterButtons.swift; sourceTree = "<group>"; };
 		33FE536C2A27CF3D0070A917 /* TimeCracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeCracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33FE536F2A27CF3D0070A917 /* TimeCrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCrackerApp.swift; sourceTree = "<group>"; };
 		33FE53712A27CF3D0070A917 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				33FE53AD2A324B280070A917 /* LogView.swift */,
+				33DB84FF2A38DED400E805EE /* TaskFilterButtons.swift */,
 				33FE53B32A32C6070070A917 /* LogRowHeader.swift */,
 				33FE53AF2A324B460070A917 /* LogRow.swift */,
 			);
@@ -297,6 +300,7 @@
 			files = (
 				33FE539D2A2AF9F20070A917 /* CloseButton.swift in Sources */,
 				33FE53B42A32C6070070A917 /* LogRowHeader.swift in Sources */,
+				33DB85002A38DED400E805EE /* TaskFilterButtons.swift in Sources */,
 				33FE538D2A28EBC90070A917 /* Task.swift in Sources */,
 				33FE539B2A2A3C420070A917 /* ClockInView.swift in Sources */,
 				33FE53AA2A2D88740070A917 /* AppColors.swift in Sources */,
