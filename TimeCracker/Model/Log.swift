@@ -18,7 +18,9 @@ class Logs: ObservableObject {
     @Published var logs: [Log]
     
     init() {
-        self.logs = []
+        self.logs = [
+            Log(taskId: "01", clockInTime: Date())
+        ]
     }
     
     func addLog(log: Log) -> Void {

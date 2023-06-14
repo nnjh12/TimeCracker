@@ -9,11 +9,13 @@ import SwiftUI
 
 struct TaskFilterButtons: View {
     var tasks: [Task]
+    var onClick: (Task) -> Void
+    
     var body: some View {
         ScrollView(.horizontal) {
             HStack {
                 ForEach(tasks) { task in
-                    TaskButton(task: task, onClick: {(task) -> Void in print(task.id)})
+                    TaskButton(task: task, onClick: onClick)
                 }
             }
             .padding()

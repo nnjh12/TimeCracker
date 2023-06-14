@@ -11,17 +11,17 @@ import SwiftUI
 struct LogView: View {
     @EnvironmentObject var tasks: Tasks
     @EnvironmentObject var logs: Logs
-    @State var filtered: [Task]
     
-    init(tasks: Tasks) {
-        filtered = tasks.tasks
+    func toggleFilter(task: Task) -> Void {
+        tasks.toggleFilter(id: task.id)
     }
     
     var body: some View {
+        
         NavigationView {
             VStack(spacing: 0) {
                 // Task filter buttons
-                TaskFilterButtons(tasks: tasks.tasks)
+                TaskFilterButtons(tasks: tasks.tasks, onClick: toggleFilter)
                 
                 // Log header
                 LogRowHeader()

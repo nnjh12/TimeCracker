@@ -12,6 +12,7 @@ struct Task: Identifiable, Hashable {
     var label: String
     var color: String
     var ableToClockOut: Bool
+    var filter = false
     var notDeleted: Bool = true
 }
 
@@ -43,6 +44,12 @@ class Tasks: ObservableObject {
             tasks[index].label = label
             tasks[index].color = color
             tasks[index].ableToClockOut = ableToClockOut
+        }
+    }
+    
+    func toggleFilter(id: String) -> Void {
+        if let index = self.tasks.firstIndex(where: { $0.id == id }) {
+            tasks[index].filter.toggle()
         }
     }
     

@@ -17,7 +17,7 @@ struct TaskButton: View {
     
     var body: some View {
         Button {
-//            onClick(task)
+            onClick(task)
             isSelected.toggle()
         } label: {
             Text(task.label)
