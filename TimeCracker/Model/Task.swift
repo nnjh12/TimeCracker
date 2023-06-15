@@ -12,7 +12,7 @@ struct Task: Identifiable, Hashable {
     var label: String
     var color: String
     var ableToClockOut: Bool
-    var filter = false
+    var filter = true
     var notDeleted: Bool = true
 }
 

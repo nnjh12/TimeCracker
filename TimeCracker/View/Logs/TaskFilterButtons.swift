@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TaskFilterButtons: View {
     var tasks: [Task]
-    var onClick: (Task) -> Void
+    var onClick: (String) -> Void
     
     var body: some View {
         ScrollView(.horizontal) {

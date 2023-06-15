@@ -16,6 +16,7 @@ struct Log: Identifiable, Hashable {
 
 class Logs: ObservableObject {
     @Published var logs: [Log]
+    @Published var filters: [String: Bool] = [:]
     
     init() {
         self.logs = [
@@ -43,6 +44,14 @@ class Logs: ObservableObject {
     func addClockOutTime(id: String, clockOutTime: Date) -> Void {
         if let index = self.logs.firstIndex(where: { $0.id == id }) {
             logs[index].clockOutTime = clockOutTime
+        }
+    }
+    
+    func updateFilter(taskId: String) -> Void {
+        if filters[taskId] != nil {
+            filters[taskId]?.toggle()
+        } else {
+            filters[taskId] = true
         }
     }
 }

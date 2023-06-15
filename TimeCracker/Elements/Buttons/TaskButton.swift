@@ -11,13 +11,13 @@ import SwiftUI
 struct TaskButton: View {
     @EnvironmentObject var appColors: AppColors
     var task: Task
-    var onClick: (Task) -> Void
+    var onClick: (String) -> Void
     
     @State var isSelected: Bool = false
     
     var body: some View {
         Button {
-            onClick(task)
+            onClick(task.id)
             isSelected.toggle()
         } label: {
             Text(task.label)
