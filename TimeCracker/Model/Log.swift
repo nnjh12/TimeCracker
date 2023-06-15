@@ -48,10 +48,14 @@ class Logs: ObservableObject {
     }
     
     func updateFilter(taskId: String) -> Void {
-        if filters[taskId] != nil {
-            filters[taskId]?.toggle()
+        if(taskId == "showAll") {
+            for key in filters.keys { filters[key] = false }
         } else {
-            filters[taskId] = true
+            if filters[taskId] != nil {
+                filters[taskId]?.toggle()
+            } else {
+                filters[taskId] = true
+            }
         }
     }
 }

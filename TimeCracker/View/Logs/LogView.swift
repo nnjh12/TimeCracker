@@ -11,7 +11,7 @@ import SwiftUI
 struct LogView: View {
     @EnvironmentObject var tasks: Tasks
     @EnvironmentObject var logs: Logs
-       
+        
     var body: some View {
         
         NavigationView {

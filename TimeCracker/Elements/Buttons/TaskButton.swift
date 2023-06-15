@@ -10,21 +10,23 @@ import SwiftUI
 /// A view that displays a task button.
 struct TaskButton: View {
     @EnvironmentObject var appColors: AppColors
-    var task: Task
+    var taskId: String
+    var label: String
+    var color: String
     var onClick: (String) -> Void
     
     @State var isSelected: Bool = false
     
     var body: some View {
         Button {
-            onClick(task.id)
+            onClick(taskId)
             isSelected.toggle()
         } label: {
-            Text(task.label)
+            Text(label)
                 .padding()
                 .background(
                     RoundedRectangle(cornerRadius: 30, style: .continuous)
-                        .fill(appColors.convertStringToColor(colorName: task.color))
+                        .fill(appColors.convertStringToColor(colorName: color))
                 )
                 .foregroundColor(.white)
                 // The border will be displayed in the selectes color.
@@ -33,5 +35,11 @@ struct TaskButton: View {
                         .stroke(.yellow, lineWidth: isSelected ? 3 : 0)
                 )
         }
+    }
+}
+
+struct TaskButton_Previews: PreviewProvider {
+    static var previews: some View {
+        TaskButton(taskId: "01", label: "example", color: "orange", onClick: {(string) -> Void in print(string)})
     }
 }

@@ -14,8 +14,9 @@ struct TaskFilterButtons: View {
     var body: some View {
         ScrollView(.horizontal) {
             HStack {
+                TaskButton(taskId: "showAll", label: "Show All", color: "yellow", onClick: onClick)
                 ForEach(tasks) { task in
-                    TaskButton(task: task, onClick: onClick)
+                    TaskButton(taskId: task.id, label: task.label, color: task.color, onClick: onClick)
                 }
             }
             .padding()
