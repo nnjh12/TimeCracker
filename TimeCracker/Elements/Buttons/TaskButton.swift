@@ -14,13 +14,11 @@ struct TaskButton: View {
     var label: String
     var color: String
     var onClick: (String) -> Void
-    
-    @State var isSelected: Bool = false
+    var isSelected: Bool
     
     var body: some View {
         Button {
             onClick(taskId)
-            isSelected.toggle()
         } label: {
             Text(label)
                 .padding()
@@ -40,6 +38,6 @@ struct TaskButton: View {
 
 struct TaskButton_Previews: PreviewProvider {
     static var previews: some View {
-        TaskButton(taskId: "01", label: "example", color: "orange", onClick: {(string) -> Void in print(string)})
+        TaskButton(taskId: "01", label: "example", color: "orange", onClick: {(string) -> Void in print(string)}, isSelected: false)
     }
 }

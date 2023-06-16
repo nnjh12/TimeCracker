@@ -17,12 +17,12 @@ struct LogView: View {
         NavigationView {
             VStack(spacing: 0) {
                 // Task filter buttons
-                TaskFilterButtons(tasks: tasks.tasks, onClick: logs.updateFilter)
+                TaskFilterButtons(tasks: tasks.tasks, onClick: logs.updateFilter, filters: logs.filters)
                 
                 // Log header
                 LogRowHeader()
                 Divider()
-                DisplayLogs(tasks: tasks.tasks, logs: logs.logs, filters: logs.filters)
+                DisplayLogs(tasks: tasks.tasks, logs: logs.filters.isEmpty ? logs.logs : logs.logs.filter {logs.filters.contains($0.taskId)})
                 .navigationTitle("Logs")
             }
         }
@@ -33,19 +33,10 @@ struct LogView: View {
 struct DisplayLogs: View {
     var tasks: [Task]
     var logs: [Log]
-    var filters: [String: Bool]
        
     var body: some View {
         List(logs) { log in
-            if filters.values.allSatisfy({!$0}) {
-                LogRow(tasks: tasks, log: log)
-            } else {
-                if filters[log.taskId] != nil {
-                    if filters[log.taskId]! {
-                        LogRow(tasks: tasks, log: log)
-                    }
-                }
-            }
+            LogRow(tasks: tasks, log: log)
         }
         .frame(maxWidth: .infinity)
         .edgesIgnoringSafeArea(.all)

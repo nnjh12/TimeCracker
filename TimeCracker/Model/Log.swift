@@ -16,7 +16,7 @@ struct Log: Identifiable, Hashable {
 
 class Logs: ObservableObject {
     @Published var logs: [Log]
-    @Published var filters: [String: Bool] = [:]
+    @Published var filters: [String] = []
     
     init() {
         self.logs = [
@@ -48,13 +48,13 @@ class Logs: ObservableObject {
     }
     
     func updateFilter(taskId: String) -> Void {
-        if(taskId == "showAll") {
-            for key in filters.keys { filters[key] = false }
+        if taskId == "showAll" {
+            filters = []
         } else {
-            if filters[taskId] != nil {
-                filters[taskId]?.toggle()
+            if let index = filters.firstIndex(where: { $0 == taskId}) {
+                filters.remove(at: index)
             } else {
-                filters[taskId] = true
+                filters.append(taskId)
             }
         }
     }
