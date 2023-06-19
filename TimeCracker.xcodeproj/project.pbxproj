@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		33DB85002A38DED400E805EE /* TaskFilterButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DB84FF2A38DED400E805EE /* TaskFilterButtons.swift */; };
+		33DB85042A4001A800E805EE /* DateSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DB85032A4001A800E805EE /* DateSelector.swift */; };
 		33FE53702A27CF3D0070A917 /* TimeCrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE536F2A27CF3D0070A917 /* TimeCrackerApp.swift */; };
 		33FE53722A27CF3D0070A917 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE53712A27CF3D0070A917 /* ContentView.swift */; };
 		33FE53742A27CF3E0070A917 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33FE53732A27CF3E0070A917 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		33DB84FF2A38DED400E805EE /* TaskFilterButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskFilterButtons.swift; sourceTree = "<group>"; };
+		33DB85032A4001A800E805EE /* DateSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelector.swift; sourceTree = "<group>"; };
 		33FE536C2A27CF3D0070A917 /* TimeCracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeCracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33FE536F2A27CF3D0070A917 /* TimeCrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCrackerApp.swift; sourceTree = "<group>"; };
 		33FE53712A27CF3D0070A917 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				33FE53A62A2C39240070A917 /* ColorSelector.swift */,
+				33DB85032A4001A800E805EE /* DateSelector.swift */,
 			);
 			path = Selector;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				33FE53AA2A2D88740070A917 /* AppColors.swift in Sources */,
 				33FE53A02A2AFC7E0070A917 /* TaskTextField.swift in Sources */,
 				33FE53A22A2AFFD20070A917 /* TextAligned.swift in Sources */,
+				33DB85042A4001A800E805EE /* DateSelector.swift in Sources */,
 				33FE53AC2A3203B50070A917 /* Log.swift in Sources */,
 				33FE538B2A28EACC0070A917 /* ClockInButton.swift in Sources */,
 				33FE53912A2A2D0A0070A917 /* ClockInOutButton.swift in Sources */,

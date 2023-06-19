@@ -16,6 +16,9 @@ struct LogView: View {
         
         NavigationView {
             VStack(spacing: 0) {
+                // Date selector
+                DateSelector()
+                
                 // Task filter buttons
                 TaskFilterButtons(tasks: tasks.tasks, onClick: logs.updateFilter, filters: logs.filters)
                 

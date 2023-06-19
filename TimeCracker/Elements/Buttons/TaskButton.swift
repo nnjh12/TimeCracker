@@ -30,7 +30,7 @@ struct TaskButton: View {
                 // The border will be displayed in the selectes color.
                 .overlay(
                     RoundedRectangle(cornerRadius: 30)
-                        .stroke(.yellow, lineWidth: isSelected ? 3 : 0)
+                        .stroke(.brown, lineWidth: isSelected ? 3 : 0)
                 )
         }
     }
