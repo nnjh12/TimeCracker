@@ -17,7 +17,7 @@ struct LogView: View {
         NavigationView {
             VStack(spacing: 0) {
                 // Date selector
-                DateSelector()
+                DateSelector(updateDateFilter: logs.updateDateFilter)
                 
                 // Task filter buttons
                 TaskFilterButtons(tasks: tasks.tasks, onClick: logs.updateFilter, filters: logs.filters)
@@ -25,7 +25,7 @@ struct LogView: View {
                 // Log header
                 LogRowHeader()
                 Divider()
-                DisplayLogs(tasks: tasks.tasks, logs: logs.filters.isEmpty ? logs.logs : logs.logs.filter {logs.filters.contains($0.taskId)})
+                DisplayLogs(tasks: tasks.tasks, logs: logs.returnFilteredLogs(logs: logs.logs))
                 .navigationTitle("Logs")
             }
         }
