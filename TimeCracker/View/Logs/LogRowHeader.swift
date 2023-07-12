@@ -13,11 +13,12 @@ struct LogRowHeader: View {
         HStack {
             Text("Clock In")
                 .frame(width: 130, alignment: .leading)
+            Image(systemName: "chevron.up")
             Text("Clock Out")
                 .frame(width: 150, alignment: .leading)
             Text("Task")
                 .frame(width: 70, alignment: .leading)
         }
-        .padding(.bottom)
+        .font(.footnote)
     }
 }

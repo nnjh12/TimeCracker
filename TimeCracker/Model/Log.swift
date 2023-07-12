@@ -81,4 +81,9 @@ class Logs: ObservableObject {
         let filteredByTask = self.filters.isEmpty ? filteredByDate : filteredByDate.filter {self.filters.contains($0.taskId)}
         return filteredByTask
     }
+    
+    func sortLogs(logs:[Log], reverse: Bool) -> [Log] {
+        let sortedArray = logs.sorted(by: {$0.clockInTime!.compare($1.clockInTime!) == .orderedDescending})
+        return sortedArray
+    }
 }

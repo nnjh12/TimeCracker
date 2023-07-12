@@ -36,8 +36,8 @@ struct TaskButton: View {
     }
 }
 
-struct TaskButton_Previews: PreviewProvider {
-    static var previews: some View {
-        TaskButton(taskId: "01", label: "example", color: "orange", onClick: {(string) -> Void in print(string)}, isSelected: false)
-    }
-}
+//struct TaskButton_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TaskButton(taskId: "01", label: "example", color: "orange", onClick: {(string) -> Void in print(string)}, isSelected: false)
+//    }
+//}
