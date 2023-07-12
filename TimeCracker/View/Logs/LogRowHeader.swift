@@ -11,14 +11,16 @@ import SwiftUI
 struct LogRowHeader: View {
     var body: some View {
         HStack {
-            Text("Clock In")
-                .frame(width: 130, alignment: .leading)
-            Image(systemName: "chevron.up")
-            Text("Clock Out")
-                .frame(width: 150, alignment: .leading)
-            Text("Task")
-                .frame(width: 70, alignment: .leading)
+            SortButton(label: "Clock In", isSortItem: true)
+                .frame(width: 130)
+            Rectangle().fill(Color.gray).frame(width: 0.5, height: 20)
+            SortButton(label: "Clock Out", isSortItem: false)
+                .frame(width: 130)
+            Rectangle().fill(Color.gray).frame(width: 0.5, height: 20)
+            SortButton(label: "Task", isSortItem: false)
+                .frame(width: 70)
         }
         .font(.footnote)
+        .padding()
     }
 }
