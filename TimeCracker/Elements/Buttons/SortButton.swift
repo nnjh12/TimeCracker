@@ -8,29 +8,42 @@
 import SwiftUI
 
 struct SortButton: View {
-    var label: String
-    @State var isSortItem: Bool
-    @State private var isSortDscending = true
+    enum SortItem : String {
+        case clockIn, clockOut, task
+        var description : String {
+            switch self {
+            case .clockIn: return "Clock In"
+            case .clockOut: return "Clock Out"
+            case .task: return "Task"
+            }
+          }
+    }
+    
+    @State var sortItem: SortItem
+    @Binding var curSortItem: SortItem
+    @Binding var isSortDscending: Bool
+
+    var onClick: (SortItem) -> Void
     var body: some View {
         Button {
-            isSortDscending.toggle()
+            onClick(sortItem)
         } label: {
             HStack {
-                Text(label)
-                    .foregroundColor(isSortItem ? .black : .gray)
-                    .fontWeight(isSortItem ? .regular : .light)
+                Text(sortItem.description)
+                    .foregroundColor(sortItem == curSortItem ? .black : .gray)
+                    .fontWeight(sortItem == curSortItem ? .regular : .light)
                 Spacer()
                 Image(systemName: isSortDscending ? "chevron.down" : "chevron.up")
                     .foregroundColor(.gray)
-                    .opacity(isSortItem ? 1 : 0)
+                    .opacity(sortItem == curSortItem ? 1 : 0)
             }
         }
 
     }
 }
 
-struct SortButton_Previews: PreviewProvider {
-    static var previews: some View {
-        SortButton(label: "Example", isSortItem: true)
-    }
-}
+//struct SortButton_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SortButton(label: "Example", isSortItem: true, onClick: {() -> Void in print("sortItem")})
+//    }
+//}
