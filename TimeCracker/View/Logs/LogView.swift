@@ -11,6 +11,9 @@ import SwiftUI
 struct LogView: View {
     @EnvironmentObject var tasks: Tasks
     @EnvironmentObject var logs: Logs
+    
+    @State private var curSortItem: SortButton.SortItem = .clockOut
+    @State private var isSortDscending = true
         
     var body: some View {
         
@@ -23,9 +26,9 @@ struct LogView: View {
                 TaskFilterButtons(tasks: tasks.tasks, onClick: logs.updateFilter, filters: logs.filters)
                 
                 // Log header
-                LogRowHeader()
+                LogRowHeader(curSortItem: $curSortItem, isSortDscending: $isSortDscending)
                 Divider()
-                DisplayLogs(tasks: tasks.tasks, logs: logs.returnFilteredLogs(logs: logs.logs))
+                DisplayLogs(tasks: tasks.tasks, logs: logs.displayLogs(logs: logs.logs, comparisonResult: isSortDscending ? .orderedDescending : .orderedAscending, sortItem: curSortItem))
                 .navigationTitle("Logs")
             }
         }

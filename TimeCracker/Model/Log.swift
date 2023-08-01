@@ -74,7 +74,7 @@ class Logs: ObservableObject {
         return compareWithFrom != .orderedAscending && compareWithTo != .orderedDescending
     }
     
-    func returnFilteredLogs(logs:[Log]) -> [Log] {
+    func filterLogs(logs:[Log]) -> [Log] {
         // filter by dates
         let filteredByDate = (self.dateFilters.0 == nil && self.dateFilters.1 == nil) ? logs : logs.filter {isLogbetween(log: $0, from: self.dateFilters.0, to: self.dateFilters.1)}
         // filter by tasks
@@ -82,8 +82,20 @@ class Logs: ObservableObject {
         return filteredByTask
     }
     
-    func sortLogs(logs:[Log], reverse: Bool) -> [Log] {
-        let sortedArray = logs.sorted(by: {$0.clockInTime!.compare($1.clockInTime!) == .orderedDescending})
-        return sortedArray
+    func sortLogs(logs:[Log], comparisonResult: ComparisonResult, sortItem: SortButton.SortItem) -> [Log] {
+        var sortedLogs = logs
+        if (sortItem == .clockOut) {
+            sortedLogs = logs.sorted(by: {$0.clockOutTime?.compare($1.clockOutTime ?? Date(timeIntervalSince1970: 0)) == comparisonResult})
+        }
+        else {
+            sortedLogs = logs.sorted(by: {$0.clockInTime!.compare($1.clockInTime!) == comparisonResult})
+        }
+        return sortedLogs
+    }
+    
+    func displayLogs(logs:[Log], comparisonResult: ComparisonResult, sortItem: SortButton.SortItem) -> [Log] {
+        var result = filterLogs(logs: logs)
+        result = sortLogs(logs: result, comparisonResult: comparisonResult, sortItem: sortItem)
+        return result
     }
 }

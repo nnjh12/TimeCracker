@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// A view that displays a button with sorting function.
 struct SortButton: View {
     enum SortItem : String {
         case clockIn, clockOut, task

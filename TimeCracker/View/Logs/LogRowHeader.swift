@@ -9,8 +9,8 @@ import SwiftUI
 
 /// A view that displays log row's header.
 struct LogRowHeader: View {
-    @State private var curSortItem: SortButton.SortItem = .clockOut
-    @State private var isSortDscending = true
+    @Binding var curSortItem: SortButton.SortItem
+    @Binding var isSortDscending: Bool
     func onClick(sortItem: SortButton.SortItem) -> Void {
         if(sortItem == curSortItem) {
             isSortDscending.toggle()
