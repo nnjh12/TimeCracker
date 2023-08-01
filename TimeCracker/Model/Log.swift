@@ -92,7 +92,7 @@ class Logs: ObservableObject {
             sortedLogs = logs.sorted(by: {($0.clockOutTime ?? Date(timeIntervalSince1970: 0)).compare($1.clockOutTime ?? Date(timeIntervalSince1970: 0)) == comparisonResult})
         }
         else if (sortItem == .task) {
-            sortedLogs = logs.sorted(by: {(returnTask(taskId: $0.taskId, tasks: tasks).label).compare(returnTask(taskId: $1.taskId, tasks: tasks).label) == comparisonResult})
+            sortedLogs = logs.sorted(by: {(returnTask(taskId: $0.taskId, tasks: tasks).label.lowercased()).compare(returnTask(taskId: $1.taskId, tasks: tasks).label.lowercased()) == comparisonResult})
         }
         else {
             sortedLogs = logs.sorted(by: {$0.clockInTime!.compare($1.clockInTime!) == comparisonResult})
