@@ -74,6 +74,10 @@ class Logs: ObservableObject {
         return compareWithFrom != .orderedAscending && compareWithTo != .orderedDescending
     }
     
+    func returnTask (taskId: String, tasks: [Task]) -> Task {
+        return tasks[tasks.firstIndex(where: {$0.id == taskId}) ?? 0]
+    }
+    
     func filterLogs(logs:[Log]) -> [Log] {
         // filter by dates
         let filteredByDate = (self.dateFilters.0 == nil && self.dateFilters.1 == nil) ? logs : logs.filter {isLogbetween(log: $0, from: self.dateFilters.0, to: self.dateFilters.1)}
@@ -82,10 +86,13 @@ class Logs: ObservableObject {
         return filteredByTask
     }
     
-    func sortLogs(logs:[Log], comparisonResult: ComparisonResult, sortItem: SortButton.SortItem) -> [Log] {
+    func sortLogs(logs:[Log], comparisonResult: ComparisonResult, sortItem: SortButton.SortItem, tasks: [Task]) -> [Log] {
         var sortedLogs = logs
         if (sortItem == .clockOut) {
-            sortedLogs = logs.sorted(by: {$0.clockOutTime?.compare($1.clockOutTime ?? Date(timeIntervalSince1970: 0)) == comparisonResult})
+            sortedLogs = logs.sorted(by: {($0.clockOutTime ?? Date(timeIntervalSince1970: 0)).compare($1.clockOutTime ?? Date(timeIntervalSince1970: 0)) == comparisonResult})
+        }
+        else if (sortItem == .task) {
+            sortedLogs = logs.sorted(by: {(returnTask(taskId: $0.taskId, tasks: tasks).label).compare(returnTask(taskId: $1.taskId, tasks: tasks).label) == comparisonResult})
         }
         else {
             sortedLogs = logs.sorted(by: {$0.clockInTime!.compare($1.clockInTime!) == comparisonResult})
@@ -93,9 +100,9 @@ class Logs: ObservableObject {
         return sortedLogs
     }
     
-    func displayLogs(logs:[Log], comparisonResult: ComparisonResult, sortItem: SortButton.SortItem) -> [Log] {
+    func displayLogs(logs:[Log], comparisonResult: ComparisonResult, sortItem: SortButton.SortItem, tasks: [Task]) -> [Log] {
         var result = filterLogs(logs: logs)
-        result = sortLogs(logs: result, comparisonResult: comparisonResult, sortItem: sortItem)
+        result = sortLogs(logs: result, comparisonResult: comparisonResult, sortItem: sortItem, tasks: tasks)
         return result
     }
 }

@@ -12,7 +12,7 @@ struct LogView: View {
     @EnvironmentObject var tasks: Tasks
     @EnvironmentObject var logs: Logs
     
-    @State private var curSortItem: SortButton.SortItem = .clockOut
+    @State private var curSortItem: SortButton.SortItem = .clockIn
     @State private var isSortDscending = true
         
     var body: some View {
@@ -28,7 +28,7 @@ struct LogView: View {
                 // Log header
                 LogRowHeader(curSortItem: $curSortItem, isSortDscending: $isSortDscending)
                 Divider()
-                DisplayLogs(tasks: tasks.tasks, logs: logs.displayLogs(logs: logs.logs, comparisonResult: isSortDscending ? .orderedDescending : .orderedAscending, sortItem: curSortItem))
+                DisplayLogs(tasks: tasks.tasks, logs: logs.displayLogs(logs: logs.logs, comparisonResult: isSortDscending ? .orderedDescending : .orderedAscending, sortItem: curSortItem, tasks: tasks.tasks))
                 .navigationTitle("Logs")
             }
         }
