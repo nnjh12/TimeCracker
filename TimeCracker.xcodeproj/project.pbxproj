@@ -10,6 +10,8 @@
 		33DB85002A38DED400E805EE /* TaskFilterButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DB84FF2A38DED400E805EE /* TaskFilterButtons.swift */; };
 		33DB85042A4001A800E805EE /* DateSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DB85032A4001A800E805EE /* DateSelector.swift */; };
 		33F2194C2A5F35A300531413 /* SortButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F2194B2A5F35A300531413 /* SortButton.swift */; };
+		33F2194E2A7D247800531413 /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F2194D2A7D247800531413 /* ReportView.swift */; };
+		33F219502A8685E400531413 /* ReportViewSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F2194F2A8685E400531413 /* ReportViewSelector.swift */; };
 		33FE53702A27CF3D0070A917 /* TimeCrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE536F2A27CF3D0070A917 /* TimeCrackerApp.swift */; };
 		33FE53722A27CF3D0070A917 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE53712A27CF3D0070A917 /* ContentView.swift */; };
 		33FE53742A27CF3E0070A917 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33FE53732A27CF3E0070A917 /* Assets.xcassets */; };
@@ -38,6 +40,8 @@
 		33DB84FF2A38DED400E805EE /* TaskFilterButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskFilterButtons.swift; sourceTree = "<group>"; };
 		33DB85032A4001A800E805EE /* DateSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelector.swift; sourceTree = "<group>"; };
 		33F2194B2A5F35A300531413 /* SortButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortButton.swift; sourceTree = "<group>"; };
+		33F2194D2A7D247800531413 /* ReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
+		33F2194F2A8685E400531413 /* ReportViewSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewSelector.swift; sourceTree = "<group>"; };
 		33FE536C2A27CF3D0070A917 /* TimeCracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeCracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33FE536F2A27CF3D0070A917 /* TimeCrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCrackerApp.swift; sourceTree = "<group>"; };
 		33FE53712A27CF3D0070A917 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -166,6 +170,7 @@
 		33FE53822A28E9000070A917 /* Reports */ = {
 			isa = PBXGroup;
 			children = (
+				33F2194D2A7D247800531413 /* ReportView.swift */,
 			);
 			path = Reports;
 			sourceTree = "<group>";
@@ -230,6 +235,7 @@
 			children = (
 				33FE53A62A2C39240070A917 /* ColorSelector.swift */,
 				33DB85032A4001A800E805EE /* DateSelector.swift */,
+				33F2194F2A8685E400531413 /* ReportViewSelector.swift */,
 			);
 			path = Selector;
 			sourceTree = "<group>";
@@ -306,6 +312,7 @@
 			files = (
 				33F2194C2A5F35A300531413 /* SortButton.swift in Sources */,
 				33FE539D2A2AF9F20070A917 /* CloseButton.swift in Sources */,
+				33F2194E2A7D247800531413 /* ReportView.swift in Sources */,
 				33FE53B42A32C6070070A917 /* LogRowHeader.swift in Sources */,
 				33DB85002A38DED400E805EE /* TaskFilterButtons.swift in Sources */,
 				33FE538D2A28EBC90070A917 /* Task.swift in Sources */,
@@ -327,6 +334,7 @@
 				33FE53702A27CF3D0070A917 /* TimeCrackerApp.swift in Sources */,
 				33FE53952A2A3BDC0070A917 /* DisplayButtons.swift in Sources */,
 				33FE53A42A2C32DB0070A917 /* RoundedButton.swift in Sources */,
+				33F219502A8685E400531413 /* ReportViewSelector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

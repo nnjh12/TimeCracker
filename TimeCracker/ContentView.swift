@@ -25,6 +25,11 @@ struct ContentView: View {
                     Label("Logs", systemImage: "line.3.horizontal")
                 }
                 .tag(2)
+            ReportView()
+                .tabItem {
+                    Label("Report", systemImage: "menucard")
+                }
+                .tag(3)
         }
         .environmentObject(tasks)
         .environmentObject(logs)
